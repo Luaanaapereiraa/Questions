@@ -4,22 +4,13 @@ interface ContainerProps {
     text: string;
     link: string;
     buttonText: string;
-    imageUrl: string;
 }
 
-const Container: React.FC<ContainerProps> = ({ title, text, link, buttonText, imageUrl }) => {
+const Container: React.FC<ContainerProps> = ({ title, text, link, buttonText }) => {
     return (
         <div className="border p-4 m-4 text-center rounded-lg bg-gradient-to-r from-purple-500 to-pink-600  w-80">
-            <div className="flex justify-start items-center space-x-1 ">
-                <Image
-                    src={imageUrl}
-                    alt="Image"
-                    width={64}
-                    height={64}
-                    className="mx-auto"
-                />
-                <h2 className="text-xl font-bold text-white mb-2">{title}</h2>
-            </div>
+            
+                <h2 className="text-xl font-bold text-white mb-2">{title}</h2> 
             <p className="text-white">{text}</p>
             <div className="flex justify-end mt-2">
                 <a href={link}
